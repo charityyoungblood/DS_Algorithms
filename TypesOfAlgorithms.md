@@ -40,7 +40,12 @@ Karatsuba Multiplication
     c = 12
     d = 34 
 - We will perform a sequence of operations only involving the above four variables (double digit numbers)
+  Step 1: Compute the product of a * c = 672
+  Step 2: Compute the product of b * d = 2652
+  Step 3: Compute the sum of (a + b)(c + d) = 134 * 46 = 6164
+  Step 4: Compute the product of Step 3 - product of Step 2 - product of Step 1 = 6164 - 2652 - 672 = 2840
   
+  Step 5: Take the results of Step 1, Step 2, and Step 4 and combine them in a simple way, to produce the product of our original x * y 
   
   
   
