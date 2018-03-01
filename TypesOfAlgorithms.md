@@ -45,7 +45,16 @@ Karatsuba Multiplication
   Step 3: Compute the sum of (a + b)(c + d) = 134 * 46 = 6164
   Step 4: Compute the product of Step 3 - product of Step 2 - product of Step 1 = 6164 - 2652 - 672 = 2840
   
-  Step 5: Take the results of Step 1, Step 2, and Step 4 and combine them in a simple way, to produce the product of our original x * y 
+*** NEXT: Take the results of Step 1, Step 2, and Step 4 and combine them in a simple way, to produce the product of our original x * y ***
+
+  Step 5: Take the product of Step 1 and pad with four zeros = 6720000
+          Take the product of Step 2, WITHOUT ANY PADDING    =    2652
+          Take the product of Step 4, pad with two zeros     =  284000
+          Add all three values                               = 7006652
+          
+          You have the product of x * y = 7006652
+  
+Recursive Algorithms - these are algorithms that invoke (call) themselves as a subroutine with a smaller input 
   
   
   
