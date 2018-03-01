@@ -61,6 +61,10 @@ The Input is two numbers witn "n" digits
   x = (10*n/2)a + b (this is 10 to the power of n/2)
   y = (10*n/2)c + d
   Where a,b,c,d are n/2 - digit numbers --- here we set up the problem into smaller input
+  Smaller size, less digits 
+  
+  Full Karatsuba Multiplication Algorithm (first part refers to 10 to the nth power)
+    x * y = (10^n)ac + (10^n/2)(ad + bc) + bd 
   
   
   
