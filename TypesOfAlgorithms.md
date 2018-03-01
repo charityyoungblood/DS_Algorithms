@@ -17,4 +17,8 @@ When creating algorithms, we generally will follow a pattern
   - What is the desired output: The PRODUCT of x * y
   
   - The way will assess the PERFORMANCE of this algorithm, is through the number of basic operations that it performs 
-  - Primitive Operation: in this case it is add or multiply 
+  - Primitive Operation: in this case the "basic operation" is to add or multiply 2 single-digit numbers 
+  - We'll then move on to the number of these basic operations performed by the algorithms of a function of the number n of digits in the Input (Input length = n)
+  
+  - In this example, we perform at most 2n operations per row 
+  - The number of operations grows - it is quadratic in the input length "n" 
