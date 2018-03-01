@@ -20,3 +20,28 @@
   
   Step 3: Merge (combine) x and y to get result of fully sorted array 
   x and y = [1,2,3,4,5,6,7,8]
+  
+** This example ignores base cases, i.e. if the array only has 2 indices, if the input is relatively small, etc - in this cases, you wouldn't use recursion, you would just return the array **
+
+6. The Sorting Problem in Pseudocode
+
+  Step 1: We'll use c = output array [length = n]
+  Step 2: Set a to 1st part of array [n/2] sorted -- which is the array length divided by 2        
+          Set b to 2nd part of array [n/2] sorted -- the array length divided in second half
+  ** In order to "sort" through each array a and b, we will implement two counters 
+      i counter for a set to = 1
+      j counter for b set to = 1
+      
+  Step 3: Create k counter set to 1 , we are looking for the smallest element overall - the purpose of k is to traverse (to go through/iterate) over the output array from left to right - checking for the smallest element overall 
+          Check both a and b 
+          
+    Final algorithm 
+    
+    for k = 1 to n 
+      if a(i) > b(j)
+        c(k) = a(i)
+        i++
+      else [b(j) < a(i)]
+        c(k) = b(j)
+        j++
+    end 
