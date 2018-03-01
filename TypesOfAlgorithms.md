@@ -55,7 +55,12 @@ Karatsuba Multiplication
           You have the product of x * y = 7006652
   
 Recursive Algorithms - these are algorithms that invoke (call) themselves as a subroutine with a smaller input 
-  
+
+As this relates to the Karatsuba multiplication algorithm, 
+The Input is two numbers witn "n" digits 
+  x = (10*n/2)a + b (this is 10 to the power of n/2)
+  y = (10*n/2)c + d
+  Where a,b,c,d are n/2 - digit numbers --- here we set up the problem into smaller input
   
   
   
