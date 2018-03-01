@@ -9,3 +9,14 @@
 5. The Sorting Problem - 
   Input: An array of n numbers, which ARE NOT sorted (i.e. [5,4,1,8,7,2,6,3]) 
   Desired Output: The input array in SORTED order (increasing) (i.e. Desired Output [1,2,3,4,5,6,7,8])
+  
+  Step 1: Split input into smaller sub problem
+  x = [5,4,1,8]
+  y = [7,2,6,3]
+  
+  Step 2: Sort x and y recursively (individually)
+  x.sort (or some other method) = [1,4,5,8]
+  y.sort (or some other method) = [2,3,6,7]
+  
+  Step 3: Merge (combine) x and y to get result of fully sorted array 
+  x and y = [1,2,3,4,5,6,7,8]
