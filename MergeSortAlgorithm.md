@@ -37,11 +37,22 @@
           
     Final algorithm 
     
-    for k = 1 to n 
-      if a(i) > b(j)
+    for k = 1 to n (n is the length of the original array)
+      if a(i) < b(j) 
         c(k) = a(i)
         i++
-      else [b(j) < a(i)]
+      else b(j) < a(i)
         c(k) = b(j)
         j++
     end 
+    
+7. Analyze how many operations are used in our Merge Sort Algorithm?
+  - We have the variable assignment of i counter
+  - We have the variable assignment of j counter 
+  - We have the variable assignment for k in a for loop 
+  - The if statement to check if a at index i is less than b at index j 
+  - The incrementing  of i++
+  - The else statement checking if b at index j is less than a at index i 
+  - The incrementing of j++
+  - In total, we have at least 6 operations, which can be computed as <= 6n
+  
