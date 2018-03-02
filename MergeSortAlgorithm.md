@@ -56,10 +56,17 @@
   - The else statement checking if b at index j is less than a at index i
   - We have the assignment of c(k) = b(j)
   - The incrementing of j++
-  - In total, we have at least 6 operations, which can be computed as <= 6n
+  - In total, we have at least 6 operations, which can be computed as <= 6n (at least, i.e. less than or equal to 6n)
   
 8. Running Time of Merge Sort - How many lines of code will merge sort take?
-  - Merge sort requires <= 6nlog2n + 6n 
+  - The claim is that Merge sort never needs more than 6 times n, times the logirithm of n (log base 2), plus 6n operations to correctly sort an input array of n numbers 
+  - The formula would look like this: <= 6nlog2n + 6n 
+  - In this case, the logirithm is much, much smaller than the input - this means the running time is much faster 
+  
+9. Proof the claim (assuming n = power of 2)
+  - We will proof this claim using the recursion tree method: this will write out all of the work done by the recursive merge sort algorithm in a "tree" structure 
+    - the children of a given "node" (leaf) would correspond to the recursive calls made by that node 
+  - The point of the tree structure is to facilitate an interesting way to count up the overall work done by the algorithm and will greatly facilitate the analysis 
   
   
   
