@@ -66,7 +66,16 @@
 9. Proof the claim (assuming n = power of 2)
   - We will proof this claim using the recursion tree method: this will write out all of the work done by the recursive merge sort algorithm in a "tree" structure 
     - the children of a given "node" (leaf) would correspond to the recursive calls made by that node 
-  - The point of the tree structure is to facilitate an interesting way to count up the overall work done by the algorithm and will greatly facilitate the analysis 
+  - The point of the tree structure is to facilitate an interesting way to count up the overall work done by the algorithm and will greatly facilitate the analysis (Merge Sort Analysis - Part 1 @video 1:12)
+  - The tree is "binary" in recognition of the fact that each invocation of merge sort makes two recursive calls 
+    - the two children will correspond to the two recursive calls of merge sort 
+  
+  ***REMEMBER: the number of levels of recursion is EXACTLY the number of times you need to divide "n" by 2, i.e. dividing n in half, until you get down to a number that is "at most" 1 - this is the definition of the logirithm base 2 of n (log2n) ***
+  
+  - In this example at the root level, you have the input array of n length
+  - Then at level 0, you split the input array into smaller arrays, (spilt in half or n/2) in this case, one array having 4 elements and another array having 4 elements  
+  - At level one, you split the array again into 2 element arrays (for a total of 4 array with 2 elements in each array) 
+  - At level two, you split the array into single element arrays (for a total of 8 arrays with 1 element in each array)
   
   
   
