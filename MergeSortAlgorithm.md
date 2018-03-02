@@ -51,8 +51,36 @@
   - We have the variable assignment of j counter 
   - We have the variable assignment for k in a for loop 
   - The if statement to check if a at index i is less than b at index j 
+  - We have the assignment of c(k) = a(i)
   - The incrementing  of i++
-  - The else statement checking if b at index j is less than a at index i 
+  - The else statement checking if b at index j is less than a at index i
+  - We have the assignment of c(k) = b(j)
   - The incrementing of j++
   - In total, we have at least 6 operations, which can be computed as <= 6n
+  
+8. Running Time of Merge Sort - How many lines of code will merge sort take?
+  - Merge sort requires <= 6nlog2n + 6n 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
