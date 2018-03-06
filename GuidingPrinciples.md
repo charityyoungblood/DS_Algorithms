@@ -16,3 +16,35 @@
 2. We won't pay much attention to constant factors and lower-order terms 
   - Mathematically, it is WAY EASIER to analyze an algorithm if we don't have to precisely pin down what the constant factors are 
   - Since we are describing algorithms that transcends any programming language (i.e. NOT programming language specific) it would be inappropriate to specify constants - the precise constants will be determined by programming language/architecture/compiler 
+  - We lose very little predictive power, even though we are not using constant factors and lower-order terms 
+  
+3. Asymptotic Analysis - we will focus on the case/running time of LARGE INPUT sizes - the performance of an algorithm as the size "n" of the input grows large, that is, tends to infinity
+  - The reason we focus ONLY on LARGE INPUT sizes, is those are the only problems which are interesting
+  - If all you need to do is sort 100 numbers, use any method you want - if it's a LARGE input, then it's time to use an algorithm 
+  
+  
+** In this course: Adopt these three above biases as "Guiding Principles"
+  - fast algorithm is approximately Worst-Case running time that grows SLOWLY with input size 
+  - We want algorithms that run quickly if we implement them 
+  - Linear Time Algorithm: an algorithms whose number of instructions grows proportional to the input size 
+    **this is what we are looking to achieve every time with our algorithms**
+    - we can't always achieve linear time, but it's what we will aspire towards 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
