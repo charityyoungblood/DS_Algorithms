@@ -77,6 +77,8 @@
   - At level one, you split the array again into 2 element arrays (for a total of 4 array with 2 elements in each array) 
   - At level two, you split the array into single element arrays (for a total of 8 arrays with 1 element in each array)
   
+  - At each level, we're using the variable name "j" for the levels, At each level j = 0, 1,2 ... log base 2 of n, there are 2^j subproblems (i.e. two problems being solved recursively) with a size of n/2^j (i.e. the array is cut in half in each call or n/2)
+  
   
   
   
