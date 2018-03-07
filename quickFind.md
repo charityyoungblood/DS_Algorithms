@@ -23,7 +23,12 @@ A. Quick Find Algorithm - "Eager Approach"
   - Interpretation: Two objects, p and q, are connected, if and ONLY if, they have the same id 
   
      0 1 2 3 4 5 6 7 8 9 >>>  
-id[] 0 1 1 8 8 0 0 1 8 8 >>>
+id[] 0 1 1 8 8 0 0 1 8 8 >>> each entry is equal to it's index into the id array
+
+At the start, ALL OBJECTS are independent, i.e. they are in their own "CONNECTED COMPONENT" 
+  - as you start to add union function (i.e. union (4,3)) - the points are then connected, either directly or indirectly (@2:40 in Quick-Find video lecture)
+  - For union(4,3) we will change all entries who's id is equal to the first id, to be equal to the second id
+    id[3], id[3] - now index 3 and index 4 are equal to 3
 
   - In this example, there are 10 objects (integers 0 through 9)
   - The id[] describes the situation after 7 connections 
@@ -40,8 +45,60 @@ B. This above example will support a QUICK implementation of the Quick-Find Algo
     Find: Check if p and q have the same id 
     
     Union: In order to merge the components of two given objects, p and q, we have to change all the entries whose id equals id[p] to equal id[q] - i.e. we will "switch" values
+   
+      - After union of 6 and 1, we have to change all the entries having an id[0] to an id[1] 
+      - We'll see this Union command as a problem, when we have a huge number of objects as values can change
+      
+    ** Breakdown at video lecture: @1:30
     
     
+C. Java Implementation of Quick Find
+    
+      pulic class QuickFindUF 
+      
+      {
+        private int[] id; 
+        
+        public QuickFindUF(int N)
+        {
+          id = new int[N];
+          for (int i = 0; i < N; i++)
+            id[i] = i;
+        }
+    
+        public boolean connected(int p, int q)
+        { return id[p] == id[q]; }
+        
+        public void union(int p, int q)
+        {
+          int pid = id[p];
+          int qid = id[q;]
+          for (int i = 0; i < id.length; i++)
+            if (id[i] == pid) 
+              id[i] = qid;
+        }
+    }
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
