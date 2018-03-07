@@ -27,8 +27,29 @@
   - Union command: this will replace components containing two objects with their union
   
 5. Union-Find Data Type (API)
-  - All of this leads up to specifying data type, which is a specification of the methods that we want to implement 
+  - All of this leads up to specifying data type, which is a specification of the methods that we want to implement in order to solve this problem 
   
+  - Our GOAL - to design efficient data structure for our union-find
+    - The number of objects "n" can be HUGE 
+    - The number of operations "m" can be HUGE
+    - Find queries and union commands may be intermixed 
+    - Our algorithm has to be EFFICIENT under these conditions 
+    
+  - In Java, we will create a Class called UF - that contains two methods 
+    - one to implement union
+    - one to implement conected, which returns a boolean
+  - The constructor takes the number of objects as an argument, so it can build data structures based on that number of object 
+  - 
+  
+    ** Example of the code:  public class UF
+                             UF(int N)  >>>> initialize union-find data structure with "n" objects (0 to n - 1)
+                             void union(int p, int q)    >>> add connection between p and q 
+                             boolean connected(int p, int q) >>> are p and q in the same component? 
+
+6. Check our API Design - BEFORE getting to far into the problem, check your API design by building a client (i.e. "test code") that will use the data type that we develop 
+
+  - Full code example of Dynamic-Connectivity Client at Dynamic Connectivity lecture @8:49
+
   
   
   
