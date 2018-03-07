@@ -36,3 +36,43 @@ id[i] 0 1 9 4 9 6 6 7 8 9
   - 7 is connected to 7, 7 is the root of 7
   - 8 is connected to 8, 8 is the "root" of 8
   - 9 is connected to 9, 9 is the "root" of 9 
+  
+B. The Data Structure for Quick-Union
+  - Integer Array id[] of size N
+  - Interpretation: id[i] is a parent of i - we will think of the integer id array id[] as representing a set of trees, or "forest" 
+    - Each entry in the id[] array is going to contain a reference to its parent in the tree 
+    - For example, using the id[] and i structure above, the parent of 3 is 4, the parent of 4 is 9 - so 3's entry on the id[] is 4 and 4's entry in id[] is 9
+    - Each entry in the array has a ROOT associated with it, this is the ROOT of it's tree - elements that are all by themselves, i.e. they are their own CONNECTED COMPONENT, point to themselves 
+    - From this data structure we can associate with each item, a ROOT which is representative of its CONNECTED COMPONENT 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
