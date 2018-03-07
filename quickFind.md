@@ -54,22 +54,26 @@ B. This above example will support a QUICK implementation of the Quick-Find Algo
     
 C. Java Implementation of Quick Find
     
-      pulic class QuickFindUF 
+      pulic class QuickFindUF  - The "Constructor"
       
       {
-        private int[] id; 
+        private int[] id; - Data Structure: we use a private integer array (for our id[]) which is the data structure we will use to support this implementation 
         
-        public QuickFindUF(int N)
+        public QuickFindUF(int N) -  The "Constructor" has to create the array (in line 64) - then go through and set the value corresponding to each index [i] to [i] 
         {
           id = new int[N];
           for (int i = 0; i < N; i++)
             id[i] = i;
         }
     
-        public boolean connected(int p, int q)
+        public boolean connected(int p, int q) - this is the find/connected operation, which is the Quick-Find Algorithm
+          - it takes two arguments, integer values p and q, and checks whether their id entries are equal, i.e. index in the id array 
+          - if the two id indexes are equal this function will return true, if not, it will return false 
+          
         { return id[p] == id[q]; }
         
-        public void union(int p, int q)
+        public void union(int p, int q) - We first find the id index corresponding to the first argument, then the id index corresponding to the second argument 
+          - We then go through the whole array (id[]) and look for the entries who's id's are equal to the id of the first argument, and set those equal to the id of the second argument 
         {
           int pid = id[p];
           int qid = id[q;]
@@ -79,7 +83,11 @@ C. Java Implementation of Quick Find
         }
     }
     
-    
+We are now at Step 4 of Developing a Usable Algorithm
+
+D. Is the Quick-Find Algorithm Fast Enough? Does it Fit in Memory?
+
+  - Cost Model: Number of array accesses 
       
       
       
