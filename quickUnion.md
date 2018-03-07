@@ -15,7 +15,7 @@
     
 # ###############################################
 
-We are currently at Step 4 in Developing a Usuable Algorithm (for the Dynamic Connectivity Problem)
+We are currently at Step 4 - 5 in Developing a Usuable Algorithm (for the Dynamic Connectivity Problem)
 
 Since Quick-Find was not deemed EFFICIENT or fast enough, we will try to implement another algorithm called Quick-Union
 
@@ -51,6 +51,36 @@ B. The Data Structure for Quick-Union
   
   - Union operation: this is very easy - to merge components containing p and q, set the id of p's root to the id of q's root 
     - For EACH one of the union operations, ONLY involves changing ONE entry in the array - VERY EFFICIENT 
+    
+C. Java Implementation of Quick-Union Algorithm 
+    
+    public class QuickUnionUF { - declare class QuickUnionUF
+    
+      private int[] id; - our data structure the id array, which will hold "type" Integer 
+      
+      public QuickUnionUF(int N) { - the QuickUnionFindUF method takes on one argument, N, of type Integer 
+      
+        id = new int[N]; - creation of a new id array with N length
+        for (int i = 0; i < N; i++) - we loop over the id array, while i is less than the length of the array, i++
+          id[i] = i; - id at index i = i 
+      }
+    
+      private int root(int i) { - this function checks the root of i 
+        while (i != id[i]) - while i is NOT equal to id with index of what is passed in for i 
+          i = id[i]; - i is equal to id of index i
+          return i; 
+      }
+    
+      public boolean connected(int p, int q) {
+        return root(p) == root(q); 
+      }
+      
+      public void union(int p, int q) {
+        int i = root(p);
+        int j = root(q); 
+        id[i] = j;
+      }  
+    }
   
   
   
