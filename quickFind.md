@@ -83,12 +83,21 @@ C. Java Implementation of Quick Find
         }
     }
     
-We are now at Step 4 of Developing a Usable Algorithm
+We are now at Step 3 of Developing a Usable Algorithm
 
 D. Is the Quick-Find Algorithm Fast Enough? Does it Fit in Memory?
 
-  - Cost Model: Number of array accesses 
-      
+  - Cost Model: Think about the number of times the code has to access the array (Number of array accesses)
+  - In our above example, both the initialize and the union operation involved a "for" loop that go through the entire array, in a constant proportional to "N" times they have to touch the array entry
+  - The "find" operation is "quick", it just has a "constant" number of times to check array entries 
+  - However find operation is problematic, because the "union" command is TOO EXPENSIVE, meaning if you have N union commands on N objects - that will take "QUADRATIC TIME" or N^2 time
+  
+## IMPORTANT ##   
+   - One of the themes that we'll cover over and over in this course is that QUADRATIC TIME (when the number of commands "N" is equal to to the squaure of it’s input value "N" objects, N * N) is MUCH TOO SLOW 
+   - We CAN'T accept QUADRATIC TIME algorithms for LARGE PROBLEMS, because they DON'T SCALE 
+   - As computers get faster and bigger, QUADRATIC ALGORITHMS get slower 
+  
+  
       
       
       
