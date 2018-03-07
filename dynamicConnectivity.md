@@ -17,6 +17,40 @@
 
     Symmetric: if p is connected to q, then q is connected to p 
 
-    Transitive: if p is connected to q and q is connected to r, then p is connected to r 
+    Transitive: means that if it applies between successive members of a sequence, it must also apply between any two members taken in order. Meaning, if p is connected to q and q is connected to r, then p is connected to r (indirectly connected)
 
-. Connected components
+  - Connected Components: When we have an equivalence relation a set of objects and connections divide into subsets called "Connected Components" - a maximal set of objects that are mutually connected 
+  - These components have the property that if any two objects in them are connected and there's no object outside that are connected to those objects - our algorithms will gain efficiency by maintaining connected components and using that knowledge to efficiently answer the query that they are presented with 
+  
+4. To Implement the Operation
+  - Find query: this will check if two objects are in the same component
+  - Union command: this will replace components containing two objects with their union
+  
+5. Union-Find Data Type (API)
+  - All of this leads up to specifying data type, which is a specification of the methods that we want to implement 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
