@@ -1,0 +1,38 @@
+<!-- Quick-Union Algorithm --> 
+
+## Steps to Developing a Usable Algorithm 
+    1. Model the problem: try to understand the main elements of the problem that needs to be solved 
+
+    2. Find an algorithm to solve it 
+
+    3. Is the algorithm fast enough? Does it fit in memory?
+
+    4. If not, figure out why
+
+    5. Find a way to address the problem 
+
+    6. Iterate until satisfied 
+    
+# ###############################################
+
+We are currently at Step 4 in Developing a Usuable Algorithm (for the Dynamic Connectivity Problem)
+
+Since Quick-Find was not deemed EFFICIENT or fast enough, we will try to implement another algorithm called Quick-Union
+
+A. Quick-Union: a "Lazy Approach" to algorithm design - where we try to avoid doing work until we have to 
+  
+  i   0 1 2 3 4 5 6 7 8 9 
+id[i] 0 1 9 4 9 6 6 7 8 9 
+
+- Each "i" value is "mapped/connected" to an id[i] value 
+- In the above example, here are the connections: the first number is "i" value, second "connected number" is the id[i] value
+  - 0 is connected to 0, the "root" of 0 is also 0, as there are no other connection that go "up" the ladder 
+  - 1 is connected to 1, the "root" of 1 is also 1, as there are no other connection that go "up" the ladder
+  - 2 is connected to 9, and 9 is connected to 9 - which means the root of 2 is 9, or 9 is the root of 2 (same)
+  - 3 is connected to 4, 4 is connected to 9, 9 is connected to 9 - 9 is the root of 3 
+  - 4 is connected to 9, 9 is connected to 9 - 9 is the "root" of 4
+  - 5 is connected to 6, 6 is connected to 6, - which means 6 is the "root" of 5 
+  - 6 is connected to 6, 6 is the root of 6 
+  - 7 is connected to 7, 7 is the root of 7
+  - 8 is connected to 8, 8 is the "root" of 8
+  - 9 is connected to 9, 9 is the "root" of 9 
