@@ -53,28 +53,49 @@ B. The Data Structure for Quick-Union
     - For EACH one of the union operations, ONLY involves changing ONE entry in the array - VERY EFFICIENT 
     
 C. Java Implementation of Quick-Union Algorithm 
+ 
+## First, we declare class QuickUnionUF ## 
+
+    public class QuickUnionUF { 
     
-    public class QuickUnionUF { - declare class QuickUnionUF
-    
-      private int[] id; - our data structure the id array, which will hold "type" Integer 
+## Second, we create our data structure, the id array, which will hold "type" Integer ##
+
+      private int[] id; 
       
-      public QuickUnionUF(int N) { - the QuickUnionFindUF method takes on one argument, N, of type Integer 
-      
-        id = new int[N]; - creation of a new id array with N length
-        for (int i = 0; i < N; i++) - we loop over the id array, while i is less than the length of the array, i++
-          id[i] = i; - id at index i = i 
+## Third, we create a QuickUnionFindUF method, which takes on one argument, N, of type Integer 
+
+      public QuickUnionUF(int N) {
+ 
+## Fourth, we initialize a new id array with N length
+
+        id = new int[N]; 
+
+## Fifth, we create a for loop, to loop over the id array, under the condition: "while i is less than the length of the array", increment i by one  
+        
+        for (int i = 0; i < N; i++)  
+        
+## Sixth, we set each element to be it's OWN ROOT, id[i] = i 
+
+          id[i] = i; 
       }
     
-      private int root(int i) { - this function checks the root of i 
-        while (i != id[i]) - while i is NOT equal to id with index of what is passed in for i 
-          i = id[i]; - i is equal to id of index i
+## Seventh, we create a private method that implements the process of finding the root, by chasing "parent pointers" i.e. the root, until we get to the point where i is equal to id[i]
+
+      private int root(int i) { 
+        while (i != id[i])
+        
+## If i is NOT EQUAL to id[i], we move i up one level in the tree, set i = id[i] 
+          i = id[i]; 
           return i; 
       }
     
+## Eighth, create a public method "connected", that checks if the root of p is equal to the root of q 
+
       public boolean connected(int p, int q) {
         return root(p) == root(q); 
       }
       
+## Ninth, create a union operation that finds the two roots and then set the id of the first root to the id of the second root 
       public void union(int p, int q) {
         int i = root(p);
         int j = root(q); 
@@ -82,6 +103,19 @@ C. Java Implementation of Quick-Union Algorithm
       }  
     }
   
+Now, we are back to Step 3 in Developing a Usuable Algorithm (for the Dynamic Connectivity Problem)
+
+D. Is the Quick-Union algorithm fast enough? Does it fit in memory?
+  - Unfortunately, Quick-Union is also too slow 
+  - Cost Model: Think about the number of times the code has to access the array (Number of array accesses)
+  - In our above example, the QuickUnionUF operation involved a "for" loop, and the "root" function/operation, involved a while loop
+    - these both go through the entire array, in a constant proportional to "N" times they have to touch the array entry
+  - The "union" operation is "quick", it just sets the two roots with the same id
+    - this ALSO has a "constant" number of "N" times to check array entries 
+  - We have N initialization, N objects and N operations - making the Quick Union Algorithm a 
+  - Defect for Quick-Union is the "trees" can get TOO TALL, which would mean that the "find" operation would be too expensive 
+    - You could wind up with a long, skinny tree of each object pointing to the next and then to do a find operation for object at the bottom, would involve going all the way through the tree involving "N" array accesses - JUST for the "find" operation
+    - This will be TOO SLOW if you have a lot of operations 
   
   
   
